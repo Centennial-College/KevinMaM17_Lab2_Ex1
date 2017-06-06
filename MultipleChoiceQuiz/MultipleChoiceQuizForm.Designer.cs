@@ -43,6 +43,7 @@
             this.backBtn.TabIndex = 1;
             this.backBtn.Text = "Back";
             this.backBtn.UseVisualStyleBackColor = true;
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
             // 
             // nextBtn
             // 

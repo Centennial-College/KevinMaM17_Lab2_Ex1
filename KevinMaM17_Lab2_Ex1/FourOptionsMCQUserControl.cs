@@ -62,6 +62,15 @@ namespace KevinMaM17_Lab2_Ex1
             get { return this.selectedAnswer; }
         }
 
+        //public method
+        public void ClearSelection()
+        {
+            this.radioButtonAnswer1.Checked = false;
+            this.radioButtonAnswer2.Checked = false;
+            this.radioButtonAnswer3.Checked = false;
+            this.radioButtonAnswer4.Checked = false;
+        }
+
         private void radioButtonAnswer_CheckedChanged(object sender, EventArgs e)
         {
             RadioButton checkChangedRadioBtn = (RadioButton)sender;

@@ -39,12 +39,14 @@ namespace MultipleChoiceQuiz
         {
             this.questionNum = 1;
             this.numCorrectAns = 0;
+            this.backBtn.Enabled = false;
             this.fourOptionsMCQUserControl.GroupBoxTitle = "Question #1";
             this.fourOptionsMCQUserControl.QuestionLbl = "Which of the following controls is\ninvisible at run time?";
             this.fourOptionsMCQUserControl.Answer1 = "Button";
             this.fourOptionsMCQUserControl.Answer2 = "Timer";
             this.fourOptionsMCQUserControl.Answer3 = "Label";
             this.fourOptionsMCQUserControl.Answer4 = "PictureBox";
+            this.fourOptionsMCQUserControl.ClearSelection();
         }
 
         private void nextBtn_Click(object sender, EventArgs e)
@@ -72,6 +74,7 @@ namespace MultipleChoiceQuiz
                 this.fourOptionsMCQUserControl.Answer2 = "Model First";
                 this.fourOptionsMCQUserControl.Answer3 = "Data First";
                 this.fourOptionsMCQUserControl.Answer4 = "Database First";
+                this.fourOptionsMCQUserControl.ClearSelection();
 
                 //prevents quiz submission from clicking next just once
                 return;
@@ -97,6 +100,11 @@ namespace MultipleChoiceQuiz
             this.backBtn.Show();
             this.nextBtn.Show();
             this.startQuiz();
+        }
+
+        private void backBtn_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Back button clicked");
         }
     }
 }
