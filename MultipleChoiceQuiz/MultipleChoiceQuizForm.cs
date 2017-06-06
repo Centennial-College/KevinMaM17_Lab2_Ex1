@@ -116,7 +116,8 @@ namespace MultipleChoiceQuiz
 
         private void backBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Back button clicked");
+            //update UI to reflect 1st question
+            this.startQuiz();
         }
     }
 }
