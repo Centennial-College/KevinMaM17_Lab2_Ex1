@@ -83,6 +83,18 @@ namespace MultipleChoiceQuiz
             //submitting quiz
             if (this.questionNum == 2)
             {
+                //evaluates answer for q #2
+                if (this.fourOptionsMCQUserControl.SelectedAnswer.Equals("Data First"))
+                {
+                    this.numCorrectAns++;
+                    MessageBox.Show("You are correct!\nData First is not an approach of Entity Framework.");
+                }
+                else
+                {
+                    MessageBox.Show($"Sorry, you are incorrect.\n{this.fourOptionsMCQUserControl.SelectedAnswer} is an approach of Entity Framework.");
+                }
+
+
                 this.gradeReceived = (double)this.numCorrectAns / 2 * 100;
 
                 MessageBox.Show($"You have submitted the quiz.\nThe following are your results:\n\nYou have correctly answered {this.numCorrectAns} questions.\nYou have incorrectly answered {2 - this.numCorrectAns} questions.\n\nYou have achieved a mark of {this.gradeReceived}%.");
