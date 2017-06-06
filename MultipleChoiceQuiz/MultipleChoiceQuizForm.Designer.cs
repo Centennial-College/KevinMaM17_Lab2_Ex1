@@ -28,23 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.fourOptionsMCQUserControl = new KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl();
             this.backBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
+            this.fourOptionsMCQUserControl = new KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl();
             this.SuspendLayout();
-            // 
-            // fourOptionsMCQUserControl
-            // 
-            this.fourOptionsMCQUserControl.Answer1 = "Answer1";
-            this.fourOptionsMCQUserControl.Answer2 = "Answer2";
-            this.fourOptionsMCQUserControl.Answer3 = "Answer3";
-            this.fourOptionsMCQUserControl.Answer4 = "Answer4";
-            this.fourOptionsMCQUserControl.GroupBoxTitle = "Title goes here";
-            this.fourOptionsMCQUserControl.Location = new System.Drawing.Point(0, 2);
-            this.fourOptionsMCQUserControl.Name = "fourOptionsMCQUserControl";
-            this.fourOptionsMCQUserControl.QuestionLbl = "Question goes here...";
-            this.fourOptionsMCQUserControl.Size = new System.Drawing.Size(640, 480);
-            this.fourOptionsMCQUserControl.TabIndex = 0;
             // 
             // backBtn
             // 
@@ -64,6 +51,20 @@
             this.nextBtn.TabIndex = 2;
             this.nextBtn.Text = "Next";
             this.nextBtn.UseVisualStyleBackColor = true;
+            this.nextBtn.Click += new System.EventHandler(this.nextBtn_Click);
+            // 
+            // fourOptionsMCQUserControl
+            // 
+            this.fourOptionsMCQUserControl.Answer1 = "Answer1";
+            this.fourOptionsMCQUserControl.Answer2 = "Answer2";
+            this.fourOptionsMCQUserControl.Answer3 = "Answer3";
+            this.fourOptionsMCQUserControl.Answer4 = "Answer4";
+            this.fourOptionsMCQUserControl.GroupBoxTitle = "Title goes here";
+            this.fourOptionsMCQUserControl.Location = new System.Drawing.Point(0, 2);
+            this.fourOptionsMCQUserControl.Name = "fourOptionsMCQUserControl";
+            this.fourOptionsMCQUserControl.QuestionLbl = "Question goes here...";
+            this.fourOptionsMCQUserControl.Size = new System.Drawing.Size(640, 480);
+            this.fourOptionsMCQUserControl.TabIndex = 0;
             // 
             // MultipleChoiceQuizForm
             // 
@@ -76,6 +77,7 @@
             this.Name = "MultipleChoiceQuizForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multiple Choice Quiz";
+            this.Load += new System.EventHandler(this.MultipleChoiceQuizForm_Load);
             this.ResumeLayout(false);
 
         }

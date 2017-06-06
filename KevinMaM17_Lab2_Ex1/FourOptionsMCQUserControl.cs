@@ -17,6 +17,9 @@ namespace KevinMaM17_Lab2_Ex1
             InitializeComponent();
         }
 
+        //stores the selected answer for the question
+        private string selectedAnswer;
+
         //property for setting and getting the question
         public string QuestionLbl
         {
@@ -53,5 +56,18 @@ namespace KevinMaM17_Lab2_Ex1
             set { this.questionGroupBox.Text = value; }
         }
 
+        //Read-only Property
+        public string SelectedAnswer
+        {
+            get { return this.selectedAnswer; }
+        }
+
+        private void radioButtonAnswer_CheckedChanged(object sender, EventArgs e)
+        {
+            RadioButton checkChangedRadioBtn = (RadioButton)sender;
+
+            //if new answer is checked, update the selected answer
+            selectedAnswer = checkChangedRadioBtn.Checked ? checkChangedRadioBtn.Text : selectedAnswer;
+        }
     }
 }
