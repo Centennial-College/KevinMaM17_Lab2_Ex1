@@ -31,6 +31,7 @@
             this.backBtn = new System.Windows.Forms.Button();
             this.nextBtn = new System.Windows.Forms.Button();
             this.fourOptionsMCQUserControl = new KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl();
+            this.startQuizBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // backBtn
@@ -66,11 +67,23 @@
             this.fourOptionsMCQUserControl.Size = new System.Drawing.Size(640, 480);
             this.fourOptionsMCQUserControl.TabIndex = 0;
             // 
+            // startQuizBtn
+            // 
+            this.startQuizBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 50.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startQuizBtn.Location = new System.Drawing.Point(94, 79);
+            this.startQuizBtn.Name = "startQuizBtn";
+            this.startQuizBtn.Size = new System.Drawing.Size(430, 265);
+            this.startQuizBtn.TabIndex = 3;
+            this.startQuizBtn.Text = "Start Quiz";
+            this.startQuizBtn.UseVisualStyleBackColor = true;
+            this.startQuizBtn.Click += new System.EventHandler(this.startQuizBtn_Click);
+            // 
             // MultipleChoiceQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(617, 454);
+            this.Controls.Add(this.startQuizBtn);
             this.Controls.Add(this.nextBtn);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.fourOptionsMCQUserControl);
@@ -87,6 +100,7 @@
         private KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl fourOptionsMCQUserControl;
         private System.Windows.Forms.Button backBtn;
         private System.Windows.Forms.Button nextBtn;
+        private System.Windows.Forms.Button startQuizBtn;
     }
 }
 
