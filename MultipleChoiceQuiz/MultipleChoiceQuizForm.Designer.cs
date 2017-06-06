@@ -28,20 +28,63 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.fourOptionsMCQUserControl = new KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl();
+            this.backBtn = new System.Windows.Forms.Button();
+            this.nextBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            // 
+            // fourOptionsMCQUserControl
+            // 
+            this.fourOptionsMCQUserControl.Answer1 = "Answer1";
+            this.fourOptionsMCQUserControl.Answer2 = "Answer2";
+            this.fourOptionsMCQUserControl.Answer3 = "Answer3";
+            this.fourOptionsMCQUserControl.Answer4 = "Answer4";
+            this.fourOptionsMCQUserControl.GroupBoxTitle = "Title goes here";
+            this.fourOptionsMCQUserControl.Location = new System.Drawing.Point(0, 2);
+            this.fourOptionsMCQUserControl.Name = "fourOptionsMCQUserControl";
+            this.fourOptionsMCQUserControl.QuestionLbl = "Question goes here...";
+            this.fourOptionsMCQUserControl.Size = new System.Drawing.Size(640, 480);
+            this.fourOptionsMCQUserControl.TabIndex = 0;
+            // 
+            // backBtn
+            // 
+            this.backBtn.Enabled = false;
+            this.backBtn.Location = new System.Drawing.Point(117, 379);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(153, 54);
+            this.backBtn.TabIndex = 1;
+            this.backBtn.Text = "Back";
+            this.backBtn.UseVisualStyleBackColor = true;
+            // 
+            // nextBtn
+            // 
+            this.nextBtn.Location = new System.Drawing.Point(290, 379);
+            this.nextBtn.Name = "nextBtn";
+            this.nextBtn.Size = new System.Drawing.Size(153, 54);
+            this.nextBtn.TabIndex = 2;
+            this.nextBtn.Text = "Next";
+            this.nextBtn.UseVisualStyleBackColor = true;
             // 
             // MultipleChoiceQuizForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.ClientSize = new System.Drawing.Size(617, 454);
+            this.Controls.Add(this.nextBtn);
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.fourOptionsMCQUserControl);
             this.Name = "MultipleChoiceQuizForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Multiple Choice Quiz";
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private KevinMaM17_Lab2_Ex1.FourOptionsMCQUserControl fourOptionsMCQUserControl;
+        private System.Windows.Forms.Button backBtn;
+        private System.Windows.Forms.Button nextBtn;
     }
 }
 
